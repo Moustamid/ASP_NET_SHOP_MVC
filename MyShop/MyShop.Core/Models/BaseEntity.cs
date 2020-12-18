@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace MyShop.Core.Models
 {
+    // class BaseEntity is an abstract Class - it can't be initiated only implemented
     public abstract class BaseEntity
     {
+        // The role of our Base Class is to "Fix" and ensure to our InMemoryRepository<T> Generic class ,
+        //  that the <T> class will always has Id prop , because T will Inherite from our Base Class .
         public string Id { get; set; }
+
+        // Good Practice , for deging .
         public DateTimeOffset CreatedAt { get; set; }
 
         public BaseEntity()
@@ -17,4 +22,7 @@ namespace MyShop.Core.Models
             this.CreatedAt = DateTime.Now;
         }
     }
+    
 }
+
+

@@ -7,7 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MyShop.DataAccess.InMemory
-{
+{     
+      // Generic Class :
     public class InMemoryRepository<T> where T : BaseEntity
     {
         ObjectCache cache = MemoryCache.Default;
@@ -15,8 +16,10 @@ namespace MyShop.DataAccess.InMemory
         string className;
 
         public InMemoryRepository()
-        {
+        {  
+            // Reflection : typeof(the-object).Its-inernal-Name
             className = typeof(T).Name;
+
             items = cache[className] as List<T>;
             if (items == null)
             {
