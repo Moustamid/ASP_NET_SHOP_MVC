@@ -30,8 +30,8 @@ namespace MyShop.WebUI.Controllers
 
         public ActionResult Create()
         {
-            Product products = new Product();
-            return View(products);
+            Product product = new Product();
+            return View(product);
         }
 
         // Create a Product-page-2  "Posting the product details "

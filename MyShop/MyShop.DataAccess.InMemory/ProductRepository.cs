@@ -32,7 +32,7 @@ namespace MyShop.DataAccess.InMemory
         }
 
 
-        /* End Point : */
+        /* --------------- End Point --------------- : */
 
         // Adding a product to the products List :
         public void Insert(Product p)
@@ -72,7 +72,7 @@ namespace MyShop.DataAccess.InMemory
              
         }
 
-        // Return a List of Products : 
+        // Return a List of Products , that can be Queried : 
 
         public IQueryable<Product> Collection()
         {
